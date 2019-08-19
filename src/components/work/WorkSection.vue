@@ -1,16 +1,15 @@
 <template>
-  <div class="container"></div>
+  <div class="work-section"></div>
 </template>
 
 <script>
 export default {
-  components: {},
+  name: 'work-section',
 }
 </script>
 
 <style lang="scss" scoped>
-.container {
-  width: 100%;
+.work-section {
   height: 1000px;
 }
 </style>
