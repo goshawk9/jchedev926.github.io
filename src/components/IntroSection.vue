@@ -1,5 +1,5 @@
 <template>
-  <div class="intro-section">
+  <div id="intro-section">
     <div class="title">
       <div>
         <h1 class="pro">
@@ -11,16 +11,31 @@
       </div>
     </div>
     <div class="see-work">
-      <span class="text-wrapper">see my works</span>
+      <a href="#" v-scroll-to="'#work-section'">
+        <span class="text-wrapper">see my works</span>
+      </a>
     </div>
   </div>
 </template>
 
 <script>
+import { setTimeout } from 'timers'
 export default {
   name: 'intro-section',
+  computed: {
+    intro_animated: {
+      get() {
+        return this.$store.state.home.intro_animated
+      },
+      set(value) {
+        this.$store.commit('home/updateIntroAnimated', value)
+      },
+    },
+  },
   mounted() {
     this.animate()
+    // set intro animation finishied
+    setTimeout(() => (this.intro_animated = true), 4600)
   },
   methods: {
     animate() {
@@ -58,7 +73,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.intro-section {
+#intro-section {
   width: 100%;
   height: 100%;
   position: relative;
@@ -106,6 +121,10 @@ export default {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
 
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
   span {
     cursor: pointer;
     transform-origin: 0 0;

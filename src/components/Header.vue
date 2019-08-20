@@ -8,8 +8,12 @@
       </h1>
     </div>
     <div class="navbar">
-      <span class="nav-item hover-link">About</span>
-      <span class="nav-item work hover-link">Work</span>
+      <a href="#" v-scroll-to="'#about-section'">
+        <span class="nav-item hover-link">About</span>
+      </a>
+      <a href="#" v-scroll-to="'#work-section'">
+        <span class="nav-item work hover-link">Work</span>
+      </a>
     </div>
   </header>
 </template>
@@ -74,8 +78,15 @@ header {
       display: inline-block;
     }
   }
-  .work {
-    margin-left: 40px;
+
+  .navbar {
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .work {
+      margin-left: 40px;
+    }
   }
 }
 
