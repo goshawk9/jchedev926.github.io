@@ -5,7 +5,11 @@
         <span class="my-works">My works</span>
       </h2>
     </div>
-    <project></project>
+    <project :index="1"></project>
+    <project :index="2"></project>
+    <project :index="3"></project>
+    <project :index="4"></project>
+    <project :index="5"></project>
   </section>
 </template>
 
@@ -22,9 +26,11 @@ export default {
 
 <style lang="scss" scoped>
 #my-works {
-  height: 1000px;
   color: $second-text-color;
   font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  margin: auto;
+  overflow: hidden;
 
   .title {
     font-weight: 400;
@@ -42,7 +48,7 @@ export default {
         bottom: -12px;
         width: 40%;
         height: 2px;
-        background: $private-color;
+        background: $primary-color;
         transform: translate(-50%);
       }
     }
