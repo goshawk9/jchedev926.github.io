@@ -8,10 +8,10 @@
       </h1>
     </div>
     <div class="navbar">
-      <a href="#" v-scroll-to="'#about-section'">
+      <a href="#" v-scroll-to="'#about'">
         <span class="nav-item hover-link">About</span>
       </a>
-      <a href="#" v-scroll-to="'#work-section'">
+      <a href="#" v-scroll-to="'#my-works'">
         <span class="nav-item work hover-link">Work</span>
       </a>
     </div>

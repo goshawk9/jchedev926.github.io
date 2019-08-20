@@ -1,5 +1,5 @@
 <template>
-  <div id="intro-section">
+  <section role="banner" id="introduction" class="section">
     <div class="title">
       <div>
         <h1 class="pro">
@@ -11,17 +11,17 @@
       </div>
     </div>
     <div class="see-work">
-      <a href="#" v-scroll-to="'#work-section'">
+      <a href="#" v-scroll-to="'#my-works'">
         <span class="text-wrapper">see my works</span>
       </a>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
 import { setTimeout } from 'timers'
 export default {
-  name: 'intro-section',
+  name: 'introduction',
   computed: {
     intro_animated: {
       get() {
@@ -73,12 +73,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#intro-section {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  color: $private-text-color;
+#introduction {
+  height: 100vh;
 }
 .title {
   position: absolute;

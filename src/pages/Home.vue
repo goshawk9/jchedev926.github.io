@@ -1,9 +1,11 @@
 <template>
   <div class="container">
     <Header />
-    <intro-section></intro-section>
-    <work-section v-if="intro_animated"></work-section>
-    <about-section v-if="intro_animated"></about-section>
+    <main>
+      <introduction></introduction>
+      <my-works v-if="intro_animated"></my-works>
+      <about v-if="intro_animated"></about>
+    </main>
     <Footer v-if="false" />
   </div>
 </template>
@@ -11,18 +13,18 @@
 <script>
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import IntroSection from '../components/IntroSection'
-import WorkSection from '../components/work/WorkSection'
-import AboutSection from '../components/about/AboutSection'
+import Introduction from '../components/Introduction'
+import MyWorks from '../components/work/MyWorks'
+import About from '../components/about/About'
 
 export default {
   name: 'home',
   components: {
     Header,
     Footer,
-    IntroSection,
-    WorkSection,
-    AboutSection,
+    Introduction,
+    MyWorks,
+    About,
   },
   created() {},
   computed: {
