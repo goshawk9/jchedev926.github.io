@@ -11,16 +11,19 @@
     <div class="layout">
       <div
         class="color"
+        v-bind:style="{ 'background-color': data.color}"
         :class="{'animate': isVisible, 'from-left': index % 2 == 0, 'from-right': index % 2 == 1}"
       ></div>
       <div class="detail">
         <div class="container">
           <div class="project-thumbnail">
             <div class="container">
-              <div
+              <img
+                :src="imageUrl"
                 class="image"
                 :class="{'animate': visibleThumbnail,'from-left': index % 2 == 0, 'from-right': index % 2 == 1}"
-              ></div>
+                alt="project's thumbnail"
+              />
             </div>
           </div>
           <div class="project-detail">
@@ -41,6 +44,12 @@ export default {
     index: {
       type: Number,
       default: 0,
+      required: true,
+    },
+    data: {
+      type: Object,
+      default: () => {},
+      required: true,
     },
   },
   data() {
@@ -49,6 +58,11 @@ export default {
       visibleThumbnail: false,
       visibleProjectContents: false,
     }
+  },
+  computed: {
+    imageUrl() {
+      return require('@/assets/' + this.data.thumbnail)
+    },
   },
   methods: {
     visibilityChanged(isVisibile) {

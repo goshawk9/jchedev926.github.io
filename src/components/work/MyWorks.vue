@@ -5,21 +5,23 @@
         <span class="my-works">My works</span>
       </h2>
     </div>
-    <project :index="1"></project>
-    <project :index="2"></project>
-    <project :index="3"></project>
-    <project :index="4"></project>
-    <project :index="5"></project>
+    <project v-for="(item, index) in myWorks" :key="index" :index="index" :data="item"></project>
   </section>
 </template>
 
 <script>
 import Project from './Project'
+import json from '../../myworks.json'
 
 export default {
   name: 'my-works',
   components: {
     Project,
+  },
+  data() {
+    return {
+      myWorks: json,
+    }
   },
 }
 </script>
