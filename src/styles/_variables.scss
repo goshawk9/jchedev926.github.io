@@ -1,6 +1,11 @@
 // z-index
-$header_zindex: 99999;
+$header_zindex: 99998;
+$flip-layer_zindex: 99999;
 // color
-$primary-color: #011832;
+// $primary-color: #011832;
+$primary-color: #222222;
+$second-color: #222222;
 $primary-text-color: #ffffff;
-$second-text-color: #011832;
+$second-text-color: $second-color;
+
+$header-height: 60px;

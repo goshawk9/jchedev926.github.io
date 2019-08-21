@@ -10,7 +10,7 @@ export default {
 
 <style lang="scss" scoped>
 #about {
-  height: 1000px;
-  background: rgba($color: #000000, $alpha: 0.5);
+  height: 80vh;
+  background-color: $second-color;
 }
 </style>

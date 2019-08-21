@@ -5,8 +5,9 @@
       <introduction></introduction>
       <my-works v-if="intro_animated"></my-works>
       <about v-if="intro_animated"></about>
+      <flip-layer></flip-layer>
     </main>
-    <Footer v-if="false" />
+    <Footer v-if="intro_animated" />
   </div>
 </template>
 
@@ -15,7 +16,8 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Introduction from '../components/Introduction'
 import MyWorks from '../components/work/MyWorks'
-import About from '../components/about/About'
+import About from '@/components/about/About'
+import FlipLayer from '@/components/FlipLayer'
 
 export default {
   name: 'home',
@@ -25,6 +27,7 @@ export default {
     Introduction,
     MyWorks,
     About,
+    FlipLayer,
   },
   created() {},
   computed: {

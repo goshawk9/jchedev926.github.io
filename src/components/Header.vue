@@ -1,17 +1,17 @@
 <template>
-  <header class="header">
+  <header class="header float">
     <div>
-      <h1 class="logo">
+      <a href="#" class="logo">
         <span class="text-wrapper">
-          <span class="letters">Hi I am Wan Hao Gui</span>
+          <span class="letters">Wan Hao Gui</span>
         </span>
-      </h1>
+      </a>
     </div>
     <div class="navbar">
-      <a href="#" v-scroll-to="'#about'">
+      <a v-on:click="jumpToAbout()">
         <span class="nav-item hover-link">About</span>
       </a>
-      <a href="#" v-scroll-to="'#my-works'">
+      <a v-scroll-to="'#my-works'">
         <span class="nav-item work hover-link">Work</span>
       </a>
     </div>
@@ -20,6 +20,16 @@
 
 <script>
 export default {
+  computed: {
+    jumpto_about: {
+      get() {
+        return this.$store.state.home.jumpto_about
+      },
+      set(value) {
+        this.$store.commit('home/updateJumpToAbout', value)
+      },
+    },
+  },
   mounted() {
     this.animate()
   },
@@ -52,18 +62,26 @@ export default {
           duration: 1200,
         })
     },
+    jumpToAbout() {
+      this.jumpto_about = true
+
+      setTimeout(() => {
+        this.$scrollTo('#about', 500)
+      }, 1200)
+    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
 header {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  height: 60px;
+  height: $header-height;
   z-index: $header_zindex;
+  background: $second-color;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,6 +91,9 @@ header {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 18px;
+    color: $primary-text-color;
+    cursor: pointer;
+
     .text-wrapper {
       position: relative;
       display: inline-block;

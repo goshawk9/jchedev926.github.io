@@ -1,0 +1,54 @@
+{
+  "name": "Wanhao Gui",
+  "company": "Proactive Ltd",
+  "email": "proactive.job@outlook.com",
+  "github": "",
+  "linkedin": "https://www.linkedin.com/in/wanhao-g-97094a15a/",
+  "works": {
+    "0": {
+      "name": "Rhymeo",
+      "description": "Rhymeo is the awesome ios app for pop songs. I love this app very much.",
+      "role": "<i>Mar 2019 - Apr 2019</i> &nbsp;&nbsp;|&nbsp;&nbsp; iOS developer &nbsp;&nbsp;|&nbsp;&nbsp; Rhymeo <br><br> I worked on this project as a freelancer with Design and Systems, primarily on code for the touch screen and projection applications.",
+      "technologies": "Swift / Firebase",
+      "thumbnail": "rhymeo.jpg",
+      "color": "#F4B32C",
+      "url": "https://google.com"
+    },
+    "1": {
+      "name": "Carl Cox",
+      "description": "Carl Cox is the funny website for designers.",
+      "role": "<i>Mar 2018 - Apr 2018</i> &nbsp;&nbsp;|&nbsp;&nbsp; Frontend Developer &nbsp;&nbsp;|&nbsp;&nbsp; Tesla <br><br> I worked on this project as a freelancer with Design and Systems, primarily on code for the touch screen and projection applications.",
+      "technologies": "React / Bootstrap 4 / MongoDB",
+      "thumbnail": "carl.jpg",
+      "color": "#F65178",
+      "url": "https://google.com"
+    },
+    "2": {
+      "name": "Carl Cox",
+      "description": "Carl Cox is the funny website for designers.",
+      "role": "<i>Mar 2018 - Apr 2018</i> &nbsp;&nbsp;|&nbsp;&nbsp; Frontend Developer &nbsp;&nbsp;|&nbsp;&nbsp; Tesla <br><br> I worked on this project as a freelancer with Design and Systems, primarily on code for the touch screen and projection applications.",
+      "technologies": "React / Bootstrap 4 / MongoDB",
+      "thumbnail": "carl.jpg",
+      "color": "#F65178",
+      "url": "https://google.com"
+    },
+    "3": {
+      "name": "Carl Cox",
+      "description": "Carl Cox is the funny website for designers.",
+      "role": "<i>Mar 2018 - Apr 2018</i> &nbsp;&nbsp;|&nbsp;&nbsp; Frontend Developer &nbsp;&nbsp;|&nbsp;&nbsp; Tesla <br><br> I worked on this project as a freelancer with Design and Systems, primarily on code for the touch screen and projection applications.",
+      "technologies": "React / Bootstrap 4 / MongoDB",
+      "thumbnail": "carl.jpg",
+      "color": "#F65178",
+      "url": "https://google.com"
+    },
+    "4": {
+      "name": "Carl Cox",
+      "description": "Carl Cox is the funny website for designers.",
+      "role": "<i>Mar 2018 - Apr 2018</i> &nbsp;&nbsp;|&nbsp;&nbsp; Frontend Developer &nbsp;&nbsp;|&nbsp;&nbsp; Tesla <br><br> I worked on this project as a freelancer with Design and Systems, primarily on code for the touch screen and projection applications.",
+      "technologies": "React / Bootstrap 4 / MongoDB",
+      "thumbnail": "carl.jpg",
+      "color": "#F65178",
+      "url": "https://google.com"
+    }
+  }
+}

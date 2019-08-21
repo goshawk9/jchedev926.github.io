@@ -2,16 +2,21 @@
   <section role="region" id="my-works" class="section">
     <div class="title">
       <h2>
-        <span class="my-works">My works</span>
+        <span class="my-works">Featured works</span>
       </h2>
     </div>
-    <project v-for="(item, index) in myWorks" :key="index" :index="index" :data="item"></project>
+    <project
+      v-for="(item, index) in myWorks"
+      :key="index"
+      v-bind:index="parseInt(index)"
+      :data="item"
+    ></project>
   </section>
 </template>
 
 <script>
 import Project from './Project'
-import json from '../../myworks.json'
+import json from '../../portfolio.json'
 
 export default {
   name: 'my-works',
@@ -20,7 +25,7 @@ export default {
   },
   data() {
     return {
-      myWorks: json,
+      myWorks: json.works,
     }
   },
 }
@@ -38,7 +43,7 @@ export default {
     font-weight: 400;
     font-size: 2vw;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 80px;
     margin-bottom: 80px;
 
     .my-works {

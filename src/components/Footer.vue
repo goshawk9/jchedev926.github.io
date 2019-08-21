@@ -1,10 +1,98 @@
 <template>
-  <div>Footer</div>
+  <footer>
+    <div class="line"></div>
+    <div class="container">
+      <div class="socials">
+        <a :href="'mailto:' + email + '?Subject=Say%20Hello'" target="_top" class="hover-link">Email</a>
+        <a :href="github" target="_blank" class="hover-link">Github</a>
+        <a :href="linkedin" target="_blank" class="hover-link">LinkedIn</a>
+      </div>
+      <p class="copyright">© Copyright 2015 - {{ year }} {{ company }}</p>
+    </div>
+  </footer>
 </template>
 
 <script>
-export default {}
+import json from '@/portfolio.json'
+
+export default {
+  data() {
+    return {
+      year: '2010',
+      company: '',
+      email: '',
+      github: '',
+      linkedin: '',
+    }
+  },
+  created() {
+    this.year = new Date().getFullYear()
+    this.company = json.company
+    this.email = json.email
+    this.github = json.github
+    this.linkedin = json.linkedin
+  },
+}
 </script>
 
 <style lang="scss" scoped>
+footer {
+  font-size: 14px;
+
+  .line {
+    width: 100%;
+    height: 1px;
+    background: #424242;
+  }
+  .container {
+    width: 100%;
+    height: 20vh;
+    background-color: #000000;
+    padding-top: 2vh;
+    padding-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    .socials {
+      text-align: center;
+
+      a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.hover-link {
+  position: relative;
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 6px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    transition: height 0.5s ease;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background: #ffffff;
+  }
+  &:hover::before {
+    height: 20%;
+  }
+}
 </style>
