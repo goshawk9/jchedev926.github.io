@@ -11,6 +11,6 @@ export default {
 <style lang="scss" scoped>
 #about {
   height: 80vh;
-  background-color: $second-color;
+  background-color: $primary-color;
 }
 </style>

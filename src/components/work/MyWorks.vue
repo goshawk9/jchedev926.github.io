@@ -34,6 +34,7 @@ export default {
 <style lang="scss" scoped>
 #my-works {
   color: $second-text-color;
+  background-color: $second-color;
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
   margin: auto;

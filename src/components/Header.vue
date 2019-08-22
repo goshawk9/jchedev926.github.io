@@ -11,7 +11,7 @@
       <a v-on:click="jumpToAbout()">
         <span class="nav-item hover-link">About</span>
       </a>
-      <a v-scroll-to="'#my-works'">
+      <a v-on:click="jumpToWork()">
         <span class="nav-item work hover-link">Work</span>
       </a>
     </div>
@@ -27,6 +27,14 @@ export default {
       },
       set(value) {
         this.$store.commit('home/updateJumpToAbout', value)
+      },
+    },
+    jumpto_work: {
+      get() {
+        return this.$store.state.home.jumpto_work
+      },
+      set(value) {
+        this.$store.commit('home/updateJumpToWork', value)
       },
     },
   },
@@ -69,6 +77,13 @@ export default {
         this.$scrollTo('#about', 500)
       }, 1200)
     },
+    jumpToWork() {
+      this.jumpto_work = true
+
+      setTimeout(() => {
+        this.$scrollTo('#my-works', 500)
+      }, 1200)
+    },
   },
 }
 </script>
@@ -81,7 +96,7 @@ header {
   width: 100%;
   height: $header-height;
   z-index: $header_zindex;
-  background: $second-color;
+  background: $primary-color;
   display: flex;
   justify-content: space-between;
   align-items: center;

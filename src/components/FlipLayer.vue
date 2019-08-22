@@ -21,10 +21,22 @@ export default {
         this.$store.commit('home/updateJumpToAbout', value)
       },
     },
+    jumpto_work: {
+      get() {
+        return this.$store.state.home.jumpto_work
+      },
+      set(value) {
+        this.$store.commit('home/updateJumpToWork', value)
+      },
+    },
   },
   watch: {
     jumpto_about(newValue) {
-      console.log(newValue)
+      if (newValue === true) {
+        this.animate()
+      }
+    },
+    jumpto_work(newValue) {
       if (newValue === true) {
         this.animate()
       }
@@ -43,7 +55,9 @@ export default {
         this.hidden = true
         this.animate1 = false
         this.animate2 = false
+
         this.jumpto_about = false
+        this.jumpto_work = false
       }, 3200)
     },
   },
@@ -57,7 +71,7 @@ export default {
   top: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #ffffff;
+  background-color: $second-color;
   z-index: $flip-layer_zindex;
   transform: translateY(100%);
   transition: transform 1s ease-in-out;
