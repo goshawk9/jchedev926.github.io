@@ -27,7 +27,7 @@ export default {
   },
   created() {
     this.year = new Date().getFullYear()
-    this.company = json.company
+    this.company = json.name
     this.email = json.email
     this.github = json.github
     this.linkedin = json.linkedin

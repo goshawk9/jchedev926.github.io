@@ -3,11 +3,11 @@
     <div class="title">
       <div>
         <h1 class="pro">
-          <span class="text-wrapper">Proactive</span>
+          <span class="text-wrapper">Wan Hao Gui</span>
         </h1>
       </div>
       <div>
-        <h2 class="aim">Full-Stack Developer / Project Manager</h2>
+        <h2 class="aim">Freelance Full-Stack &amp; Mobile Developer</h2>
       </div>
     </div>
     <div class="see-work">
@@ -94,7 +94,7 @@ export default {
     font-size: 6vw;
   }
   h2 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     margin-top: 3vw;
     font-style: italic;

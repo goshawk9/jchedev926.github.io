@@ -3,7 +3,7 @@
     <div>
       <a href="#" class="logo">
         <span class="text-wrapper">
-          <span class="letters">Wan Hao Gui</span>
+          <span class="letters">Proactive</span>
         </span>
       </a>
     </div>
