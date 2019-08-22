@@ -92,12 +92,12 @@ export default {
   h1 {
     font-weight: 700;
     font-size: 6vw;
+    text-transform: uppercase;
   }
   h2 {
     font-size: 16px;
     font-weight: 400;
     margin-top: 3vw;
-    font-style: italic;
   }
 
   span {
@@ -106,6 +106,12 @@ export default {
 
   .active {
     margin-left: 2vw;
+  }
+
+  .line {
+    width: 100%;
+    height: 4px;
+    background-color: $primary-text-color;
   }
 }
 

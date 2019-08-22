@@ -1,3 +1,13 @@
+@import "./reset";
+@import "./_fonts";
+
+html {
+  font-family: $primary-font-family;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .section {
   width: 100%;
   position: relative;
