@@ -1,6 +1,6 @@
 <template>
-  <header class="header float">
-    <div>
+  <header class="header float" :class="{ 'animate': animate1 }">
+    <div class="container">
       <a href="#" class="logo">
         <span class="text-wrapper">
           <span class="letters">Proactive</span>
@@ -20,6 +20,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      animate1: false,
+    }
+  },
   computed: {
     jumpto_about: {
       get() {
@@ -43,32 +48,9 @@ export default {
   },
   methods: {
     animate() {
-      // Wrap every letter in a span
-      var textWrapper = document.querySelector('.logo .letters')
-      textWrapper.innerHTML = textWrapper.textContent.replace(
-        /([^\x00-\x80]|\w)/g,
-        "<span class='letter'>$&</span>",
-      )
-
-      this.$anime
-        .timeline({ loop: false })
-        .add({
-          targets: '.logo .letter',
-          opacity: [0, 1],
-          easing: 'easeOutExpo',
-          duration: 1200,
-          offset: '-=775',
-          delay: function(el, i) {
-            return 2000 + 40 * (i + 1)
-          },
-        })
-        .add({
-          targets: '.navbar',
-          opacity: [0, 1],
-          translateY: [-60, 0],
-          easing: 'easeOutCirc',
-          duration: 1200,
-        })
+      setTimeout(() => {
+        this.animate1 = true
+      }, 2800)
     },
     jumpToAbout() {
       this.jumpto_about = true
@@ -100,12 +82,23 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 1.2em 10%;
+  @include tablet {
+    padding: 1.2em 6%;
+  }
+  @include desktop {
+    padding: 1.2em 4%;
+  }
+  transform: translateY(-100%);
+
+  &.animate {
+    transform: translateY(0);
+    transition: transform 1s ease-in;
+  }
 
   .logo {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 18px;
+    font-weight: 400;
+    font-size: 1.2em;
     color: $primary-text-color;
     cursor: pointer;
 
@@ -117,11 +110,11 @@ header {
 
   .navbar {
     a {
-      color: #ffffff;
+      color: $primary-text-color;
       text-decoration: none;
     }
     .work {
-      margin-left: 40px;
+      margin-left: 2em;
     }
   }
 }
@@ -129,8 +122,8 @@ header {
 .hover-link {
   position: relative;
   display: inline-block;
-  padding-top: 10px;
-  padding-bottom: 6px;
+  padding-top: 0.6em;
+  padding-bottom: 0.4em;
   overflow: hidden;
   transform: translateX(0%);
   cursor: pointer;
@@ -153,12 +146,5 @@ header {
     transform: translateX(10%);
   }
   transition: transform 0.5s ease;
-}
-</style>
-<style lang="scss">
-.logo {
-  .letter {
-    display: inline-block;
-  }
 }
 </style>

@@ -28,22 +28,29 @@ export default {
 <style lang="scss" scoped>
 #about {
   background-color: $primary-color;
+  height: 80vh;
+  min-height: 860px;
+  @media screen and (max-height: 640px) {
+    min-height: 980px;
+  }
 
   > .container {
-    width: 48vw;
+    width: 80vw;
+    height: 100%;
+    @include tablet {
+      width: 64vw;
+    }
+    @include desktop {
+      width: 48vw;
+    }
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 8vh;
-    margin-bottom: 8vh;
-
-    h2,
-    p {
-      font-family: 'Roboto', sans-serif;
-    }
+    padding-top: 10vh;
+    padding-bottom: 8vh;
 
     h2 {
-      font-size: 44px;
+      font-size: 2em;
       font-weight: 700;
       max-width: 420px;
       margin-top: 0;
@@ -51,8 +58,14 @@ export default {
       line-height: 1.4;
     }
     p {
-      font-size: 16px;
-      max-width: 420px;
+      font-size: 1em;
+      max-width: 90%;
+      @include tablet {
+        max-width: 90%;
+      }
+      @include desktop {
+        max-width: 100%;
+      }
       line-height: 1.8;
     }
     a {
