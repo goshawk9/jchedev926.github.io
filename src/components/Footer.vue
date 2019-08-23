@@ -37,7 +37,7 @@ export default {
 
 <style lang="scss" scoped>
 footer {
-  font-size: 14px;
+  font-size: 1em;
 
   .line {
     width: 100%;
@@ -49,7 +49,7 @@ footer {
     height: 20vh;
     background-color: #000000;
     padding-top: 2vh;
-    padding-bottom: 10vh;
+    padding-bottom: 8vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -66,8 +66,8 @@ footer {
       a {
         color: #ffffff;
         text-decoration: none;
-        font-size: 16px;
-        margin: 20px;
+        font-size: 1em;
+        margin: 1.2em;
         cursor: pointer;
       }
     }
@@ -76,8 +76,8 @@ footer {
 .hover-link {
   position: relative;
   display: inline-block;
-  padding-top: 10px;
-  padding-bottom: 6px;
+  padding-top: 1em;
+  padding-bottom: 0.4em;
   overflow: hidden;
   cursor: pointer;
 
@@ -92,7 +92,7 @@ footer {
     background: #ffffff;
   }
   &:hover::before {
-    height: 20%;
+    height: 10%;
   }
 }
 </style>

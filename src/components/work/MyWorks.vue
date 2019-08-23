@@ -1,10 +1,8 @@
 <template>
   <section role="region" id="my-works" class="section">
-    <div class="title">
-      <h2>
-        <span class="my-works">Featured works</span>
-      </h2>
-    </div>
+    <h2 class="title">
+      <span>Featured works</span>
+    </h2>
     <project
       v-for="(item, index) in myWorks"
       :key="index"
@@ -35,26 +33,31 @@ export default {
 #my-works {
   color: $second-text-color;
   background-color: $second-color;
-  font-family: 'Roboto', sans-serif;
-  box-sizing: border-box;
-  margin: auto;
   overflow: hidden;
 
   .title {
-    font-weight: 400;
-    font-size: 2vw;
-    text-align: center;
-    padding-top: 80px;
-    margin-bottom: 80px;
+    font-size: 2em;
+    @include tablet {
+      font-size: 2em;
+    }
+    @include desktop {
+      font-size: 3em;
+    }
 
-    .my-works {
+    font-weight: 700;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+
+    span {
       position: relative;
+
       &::before {
         content: '';
         position: absolute;
         left: 50%;
-        bottom: -12px;
-        width: 40%;
+        bottom: -0.4rem;
+        width: 90%;
         height: 2px;
         background: $primary-color;
         transform: translate(-50%);

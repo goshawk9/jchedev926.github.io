@@ -1,27 +1,35 @@
 <template>
   <section role="banner" id="introduction" class="section">
-    <div class="title">
-      <div>
-        <h1 class="pro">
-          <span class="text-wrapper">Wan Hao Gui</span>
-        </h1>
+    <div class="main">
+      <div class="name">
+        <h1 :class="{ 'animate': animateName3 }">Wan Hao Gui</h1>
+        <div class="revealer" :class="{ 'animate-1': animateName1, 'animate-2': animateName2 }"></div>
       </div>
-      <div>
-        <h2 class="aim">Freelance Full-Stack &amp; Mobile Developer</h2>
+
+      <div class="position" :class="{ 'animate': animatePosition }">
+        <h2>Freelance Full-Stack &amp; Mobile Developer</h2>
       </div>
     </div>
     <div class="see-work">
       <a href="#" v-scroll-to="'#my-works'">
-        <span class="text-wrapper">see my works</span>
+        <span class="text-wrapper" :class="{'animate': animateWork}">see my works</span>
       </a>
     </div>
   </section>
 </template>
 
 <script>
-import { setTimeout } from 'timers'
 export default {
   name: 'introduction',
+  data() {
+    return {
+      animateName1: false,
+      animateName2: false,
+      animateName3: false,
+      animatePosition: false,
+      animateWork: false,
+    }
+  },
   computed: {
     intro_animated: {
       get() {
@@ -34,39 +42,22 @@ export default {
   },
   mounted() {
     this.animate()
-    // set intro animation finishied
-    setTimeout(() => (this.intro_animated = true), 4600)
   },
   methods: {
     animate() {
-      this.$anime
-        .timeline({ loop: false })
-        .add({
-          targets: '.pro .text-wrapper',
-          scale: [14, 1],
-          opacity: [0, 1],
-          easing: 'easeOutCirc',
-          duration: 800,
-          delay: function(el, i) {
-            return 800 * i
-          },
-        })
-        .add({
-          targets: '.aim',
-          translateY: [40, 0],
-          opacity: [0, 1],
-          easing: 'easeOutCirc',
-          duration: 1200,
-          delay: 400,
-        })
-        .add({
-          targets: '.see-work .text-wrapper',
-          translateY: [180, 0],
-          easing: 'easeOutCirc',
-          opacity: [0, 1],
-          duration: 1200,
-          delay: 1200,
-        })
+      setTimeout(() => {
+        this.animateName1 = true
+      }, 100)
+      setTimeout(() => {
+        this.animateName2 = true
+      }, 300)
+      setTimeout(() => {
+        this.animateName3 = true
+      }, 1000)
+      setTimeout(() => (this.animatePosition = true), 1600)
+      setTimeout(() => (this.animateWork = true), 2800)
+      // set intro animation finishied
+      setTimeout(() => (this.intro_animated = true), 4800)
     },
   },
 }
@@ -76,82 +67,113 @@ export default {
 #introduction {
   height: 100vh;
 }
-.title {
+.main {
   position: absolute;
-  width: 100%;
+  width: 60%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  h1,
-  h2 {
-    display: inline-block;
-    font-family: 'Roboto', sans-serif;
-  }
+}
+
+.name {
+  position: relative;
+  overflow: hidden;
 
   h1 {
     font-weight: 700;
-    font-size: 6vw;
     text-transform: uppercase;
-  }
-  h2 {
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 3vw;
+    font-size: 6em;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+
+    &.animate {
+      opacity: 1;
+    }
   }
 
-  span {
-    display: inline-block;
-  }
-
-  .active {
-    margin-left: 2vw;
-  }
-
-  .line {
+  .revealer {
+    position: absolute;
     width: 100%;
-    height: 4px;
-    background-color: $primary-text-color;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: $primary-text-color;
+    transform: translateX(-102%);
+    transform-origin: 0 0;
+    transition: transform 1s ease-in;
+
+    &.animate-1 {
+      transform: translateX(0);
+    }
+
+    &.animate-2 {
+      transform: translateX(102%);
+    }
+  }
+}
+
+.position {
+  overflow: hidden;
+
+  h2 {
+    font-size: 1.2em;
+    font-weight: 400;
+    opacity: 0;
+    transition: opacity, 1s ease-in;
+  }
+
+  &.animate {
+    h2 {
+      opacity: 1;
+    }
   }
 }
 
 .see-work {
   position: absolute;
   left: 50%;
-  bottom: 100px;
+  bottom: 10vh;
   transform: translate(-50%);
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
 
   a {
+    display: inline-block;
     color: #ffffff;
     text-decoration: none;
   }
+
   span {
     cursor: pointer;
     transform-origin: 0 0;
     text-transform: uppercase;
     display: inline-block;
+    transform: translateY(12vh);
+    opacity: 0;
+    &.animate {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity, transform 1s ease-in;
+    }
+
     &::before {
       content: '';
       position: absolute;
       left: 50%;
-      bottom: -100px;
+      bottom: -10vh;
       width: 2px;
-      height: 60px;
+      height: 6vh;
       background: #ffffff;
       transform: translate(-50%);
     }
     &:hover::before {
-      height: 40px;
-      transition: height 0.5s ease;
+      height: 4vh;
+      transition: height 0.5s ease-in;
     }
   }
 }
 </style>
-<style language="scss">
-.active .letter {
-  display: inline-block;
-  transform-origin: 0 0;
-}
-</style>
+

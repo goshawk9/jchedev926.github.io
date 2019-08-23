@@ -32,8 +32,10 @@
                 <p class="tech-content">{{ data.technologies }}</p>
                 <h4 class="role-title">My role</h4>
                 <p class="role-content" v-html="data.role"></p>
-                <div class="btn" v-bind:style="{'background-color': data.color}">
-                  <a v-bind:href="data.url" target="_blank">view website</a>
+                <div class="view-more">
+                  <div class="btn" v-bind:style="{'background-color': data.color}">
+                    <a v-bind:href="data.url" target="_blank">view website</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -96,14 +98,27 @@ export default {
 .from-right {
   transform: translateX(120%);
 }
+
+$thumbnail-width: 16vw;
+$thumbnail-height: 9vw;
 .project {
   width: 100%;
-  margin-bottom: 80px;
+
+  @include desktop {
+    margin-bottom: 3rem;
+  }
+
+  @include tablet {
+    margin-bottom: 2rem;
+  }
+
+  margin-bottom: 1rem;
 
   .layout {
     position: relative;
+
     .color {
-      height: 40vh;
+      height: 27vw;
       position: relative;
 
       &.animate {
@@ -113,34 +128,53 @@ export default {
     }
 
     .detail {
-      width: 48vw;
+      width: $thumbnail-width * 5;
+
+      @include tablet {
+        width: $thumbnail-width * 4;
+      }
+
+      @include desktop {
+        width: $thumbnail-width * 3;
+      }
       max-width: 1280px;
       margin: auto;
 
-      > .container {
+      .container {
         position: relative;
         width: 100%;
       }
     }
   }
 }
+
 .project-thumbnail {
   width: 100%;
-  height: 27vw;
+  height: $thumbnail-height * 5;
+  @include tablet {
+    height: $thumbnail-height * 4;
+  }
+  @include desktop {
+    height: $thumbnail-height * 3;
+  }
   position: absolute;
   left: 50%;
-  top: -30vh;
+  top: -20vw;
   transform: translateX(-50%);
   overflow: hidden;
 
   > .container {
-    width: 100%;
     height: 100%;
-    border-width: 30px;
+    border-width: 0.5rem;
+    @include tablet {
+      border-width: 1rem;
+    }
+    @include desktop {
+      border-width: 2em;
+    }
     border-style: solid;
-    border-radius: 20px;
+    border-radius: 0.8em;
     border-color: $primary-color;
-    box-sizing: border-box;
     background: $primary-color;
     text-align: center;
 
@@ -156,9 +190,13 @@ export default {
   }
 }
 .project-detail {
-  width: 100%;
-  // height: 40vw;
-  padding-top: calc(27vw - 30vh);
+  padding-top: $thumbnail-height * 5 - 20vw;
+  @include tablet {
+    padding-top: $thumbnail-height * 4 - 20vw;
+  }
+  @include desktop {
+    padding-top: $thumbnail-height * 3 - 20vw;
+  }
 
   > .container {
     width: 100%;
@@ -169,9 +207,14 @@ export default {
       width: 100%;
       height: 100%;
       opacity: 0;
-      transform: translateY(40px);
-      margin-top: 60px;
-      font-family: 'Roboto', sans-serif;
+      transform: translateY(3em);
+      margin-top: 1rem;
+      @include tablet {
+        margin-top: 2rem;
+      }
+      @include desktop {
+        margin-top: 4rem;
+      }
 
       &.animate {
         transform: translateY(0);
@@ -184,49 +227,51 @@ export default {
 
 .app-name {
   font-weight: 700;
-  font-size: 1.2vw;
-  margin-top: 2vw;
-  margin-bottom: 1vw;
+  font-size: 2em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .description {
   line-height: 1.4;
-  font-size: 16px;
+  font-size: 1em;
   margin-top: 0;
-  margin-bottom: 2vw;
+  margin-bottom: 2rem;
 }
 
 .tech-title,
 .role-title {
-  font-size: 1.2vw;
+  font-size: 1.8em;
   margin-top: 0;
-  margin-bottom: 1vw;
+  margin-bottom: 1rem;
 }
 
 .tech-content,
 .role-content {
-  font-size: 16px;
+  font-size: 1em;
   margin-top: 0;
-  margin-bottom: 2vw;
+  margin-bottom: 2rem;
   max-width: 768px;
   line-height: 1.4;
 }
 
-.btn {
-  width: 100%;
-  margin-top: 3vw;
-  margin-bottom: 3vw;
-  padding-top: 1vw;
-  padding-bottom: 1vw;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  cursor: pointer;
+.view-more {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 
-  a {
-    color: $primary-color;
-    text-decoration: none;
+  .btn {
+    width: 100%;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    font-weight: 400;
+    font-size: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+    }
   }
 }
 </style>
