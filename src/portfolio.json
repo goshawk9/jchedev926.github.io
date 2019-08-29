@@ -6,49 +6,49 @@
   "linkedin": "https://www.linkedin.com/in/wanhao-g-97094a15a/",
   "works": {
     "0": {
-      "name": "Rhymeo",
-      "description": "Rhymeo is the awesome ios app for pop songs. I love this app very much.",
-      "role": "<i>Mar 2019 - Apr 2019</i> &nbsp;&nbsp;|&nbsp;&nbsp; iOS developer &nbsp;&nbsp;|&nbsp;&nbsp; Rhymeo <br><br> I worked on this project as a freelancer with Design and Systems, primarily on code for the touch screen and projection applications.",
-      "technologies": "Swift / Firebase",
-      "thumbnail": "rhymeo.jpg",
-      "color": "#F4B32C",
-      "url": "https://google.com"
+      "name": "PDF Portal",
+      "description": "PDF Portal is a website that provides features like full-text search from PDF file, PDF view and creating.",
+      "role": "<i>May 2019 - July 2019</i> &nbsp;&nbsp;|&nbsp;&nbsp; Full-stack Developer &nbsp;&nbsp;|&nbsp;&nbsp; Internnect <br><br> I worked on both front-end and back-end so built UI pages with VueJS and a module to view and create new pdf file from images and texts.",
+      "technologies": "VueJS / Flask / MongoDB / Elasticsearch",
+      "thumbnail": "pdf_portal.png",
+      "color": "#007BFF",
+      "url": ""
     },
     "1": {
-      "name": "Carl Cox",
-      "description": "Carl Cox is the funny website for designers.",
-      "role": "<i>Mar 2018 - Apr 2018</i> &nbsp;&nbsp;|&nbsp;&nbsp; Frontend Developer &nbsp;&nbsp;|&nbsp;&nbsp; Tesla <br><br> I worked on this project as a freelancer with Design and Systems, primarily on code for the touch screen and projection applications.",
-      "technologies": "React / Bootstrap 4 / MongoDB",
-      "thumbnail": "carl.jpg",
-      "color": "#F65178",
-      "url": "https://google.com"
+      "name": "CBot | Auto Trading Crypto Currency",
+      "description": "CBot is a website that supports automated trading between various currencies of Crypto and Fiat like Bitcoin, Etherium, US Dollar, and Japanese Yen.<br> It supports Binance and bitFlyer as a trading platform.",
+      "role": "<i>Feburary 2018 - April 2018</i> &nbsp;&nbsp;|&nbsp;&nbsp; Full-stack Developer &nbsp;&nbsp;|&nbsp;&nbsp; CBot LLC <br><br> I worked on UI pages and trading module based on Dollar-Cost Averaging strategy.",
+      "technologies": "FuelPHP / MySQL / Binance APIs / bitFlyer APIs",
+      "thumbnail": "cbot.png",
+      "color": "#F65500",
+      "url": ""
     },
     "2": {
-      "name": "Carl Cox",
-      "description": "Carl Cox is the funny website for designers.",
-      "role": "<i>Mar 2018 - Apr 2018</i> &nbsp;&nbsp;|&nbsp;&nbsp; Frontend Developer &nbsp;&nbsp;|&nbsp;&nbsp; Tesla <br><br> I worked on this project as a freelancer with Design and Systems, primarily on code for the touch screen and projection applications.",
-      "technologies": "React / Bootstrap 4 / MongoDB",
-      "thumbnail": "carl.jpg",
-      "color": "#DF4B33",
-      "url": "https://google.com"
+      "name": "SmartPitch Hands Free Speeds",
+      "description": "SmartPitch® turns your smartphone into a Hands Free PRECISION SPEED GUN FOR PITCHING & HITTING!!! <br> Hands-free, automatic, not a toy stop-watch app. As accurate as $1,200 radar guns at less than 1% the cost. Charts and history of all pitches and hits.",
+      "role": "<i>March 2017 - October 2017</i> &nbsp;&nbsp;|&nbsp;&nbsp; iOS developer &nbsp;&nbsp;|&nbsp;&nbsp; SmartPitch LLC <br><br> I worked on this project as a freelancer, and implemted following parts.<br>- App UI Prototype<br> - Core engine that processes camera image feeds using cvBlob and calculate the speed of ball<br> - Fix memory leaks and app crashes <br>",
+      "technologies": "Objective-C / Java / C++ / Android NDK / cvBlob(OpenCV)",
+      "thumbnail": "smartpitch.png",
+      "color": "#044BA5",
+      "url": "https://www.smartpitchbaseball.com/"
     },
     "3": {
-      "name": "Carl Cox",
-      "description": "Carl Cox is the funny website for designers.",
-      "role": "<i>Mar 2018 - Apr 2018</i> &nbsp;&nbsp;|&nbsp;&nbsp; Frontend Developer &nbsp;&nbsp;|&nbsp;&nbsp; Tesla <br><br> I worked on this project as a freelancer with Design and Systems, primarily on code for the touch screen and projection applications.",
-      "technologies": "React / Bootstrap 4 / MongoDB",
-      "thumbnail": "carl.jpg",
-      "color": "#F65178",
-      "url": "https://google.com"
+      "name": "Rhymeo | Freestyle Rap Studio",
+      "description": "Freestyle and songwriting app that suggests lyrics from what you say, or write.",
+      "role": "<i>May 2016 - June 2016</i> &nbsp;&nbsp;|&nbsp;&nbsp; iOS developer &nbsp;&nbsp;|&nbsp;&nbsp; Rhymeo LLC <br><br> I worked on this project as a freelancer, primarily coded for UI and video core engine.",
+      "technologies": "Swift 3 / AVFoundation / FFmpeg",
+      "thumbnail": "rhymeo.jpeg",
+      "color": "#0F1A34",
+      "url": "https://apps.apple.com/us/app/rhymeo-freestyle-rap-studio/id938323283"
     },
     "4": {
-      "name": "Carl Cox",
-      "description": "Carl Cox is the funny website for designers.",
-      "role": "<i>Mar 2018 - Apr 2018</i> &nbsp;&nbsp;|&nbsp;&nbsp; Frontend Developer &nbsp;&nbsp;|&nbsp;&nbsp; Tesla <br><br> I worked on this project as a freelancer with Design and Systems, primarily on code for the touch screen and projection applications.",
-      "technologies": "React / Bootstrap 4 / MongoDB",
-      "thumbnail": "carl.jpg",
+      "name": "Mentor | Evaluation Tool",
+      "description": "Mentor is a web and mobile application that gives trainees the ability to upload videos to designated experts for evaluations, coaching and feedback.<br> The experts review the videos while recording audio commentary and annotating the video with drawing tools.",
+      "role": "<i>April 2016 - September 2016</i> &nbsp;&nbsp;|&nbsp;&nbsp; Frontend Developer &nbsp;&nbsp;|&nbsp;&nbsp; Tesla <br><br> I worked on App UI with REST API data and core engine to process video and audio data using AVFoundation and FFmpeg.",
+      "technologies": "Objective-C / AVFoundation / GLSL / FFmpeg",
+      "thumbnail": "mentor.jpg",
       "color": "#F65178",
-      "url": "https://google.com"
+      "url": "https://apps.apple.com/nl/app/mentor-evaluation-tool/id937356310?l=en"
     }
   }
 }
