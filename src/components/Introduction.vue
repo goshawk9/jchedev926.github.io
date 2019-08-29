@@ -2,12 +2,12 @@
   <section role="banner" id="introduction" class="section">
     <div class="main">
       <div class="name">
-        <h1 :class="{ 'animate': animateName3 }">Wan Hao Gui</h1>
+        <h1 :class="{ 'animate': animateName3 }">{{ name }}</h1>
         <div class="revealer" :class="{ 'animate-1': animateName1, 'animate-2': animateName2 }"></div>
       </div>
 
       <div class="position" :class="{ 'animate': animatePosition }">
-        <h2>Freelance Full-Stack &amp; Mobile Developer</h2>
+        <h2>{{ positon }}</h2>
       </div>
     </div>
     <div class="see-work">
@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import json from '../portfolio.json'
 export default {
   name: 'introduction',
   data() {
@@ -28,6 +29,9 @@ export default {
       animateName3: false,
       animatePosition: false,
       animateWork: false,
+
+      name: json.name,
+      positon: json.position,
     }
   },
   computed: {

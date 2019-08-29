@@ -1,13 +1,13 @@
 {
-  "name": "Wanhao Gui",
-  "company": "Proactive Ltd",
+  "name": "Wan hao Gui",
+  "position": "Freelance Full-Stack Developer",
   "email": "proactive.job@outlook.com",
   "github": "",
   "linkedin": "https://www.linkedin.com/in/wanhao-g-97094a15a/",
   "works": [{
       "name": "PDF Portal",
       "description": "PDF Portal is a website that provides features like full-text search from PDF file, PDF view and creating.",
-      "role": "<i>May 2019 - July 2019</i> &nbsp;&nbsp;|&nbsp;&nbsp; Full-stack Developer &nbsp;&nbsp;|&nbsp;&nbsp; Internnect LLC <br><br> I worked on both front-end and back-end so built UI pages with VueJS and a module to view and create new pdf file from images and texts.",
+      "role": "<i>May 2019 - July 2019</i> &nbsp;&nbsp;|&nbsp;&nbsp; Full-Stack Developer &nbsp;&nbsp;|&nbsp;&nbsp; Internnect LLC <br><br> I worked on both front-end and back-end so built UI pages with VueJS and a module to view and create new pdf file from images and texts.",
       "technologies": "VueJS / Flask / MongoDB / Elasticsearch",
       "thumbnail": "pdf_portal.png",
       "color": "#007BFF",
@@ -17,7 +17,7 @@
     {
       "name": "CBot | Auto Trading Crypto Currency",
       "description": "CBot is a website that supports automated trading between various currencies of Crypto and Fiat like Bitcoin, Etherium, US Dollar, and Japanese Yen.<br> It supports Binance and bitFlyer as a trading platform.",
-      "role": "<i>Feburary 2018 - April 2018</i> &nbsp;&nbsp;|&nbsp;&nbsp; Full-stack Developer &nbsp;&nbsp;|&nbsp;&nbsp; CBot LLC <br><br> I worked on UI pages and trading module based on Dollar-Cost Averaging strategy.",
+      "role": "<i>Feburary 2018 - April 2018</i> &nbsp;&nbsp;|&nbsp;&nbsp; Full-Stack Developer &nbsp;&nbsp;|&nbsp;&nbsp; CBot LLC <br><br> I worked on UI pages and trading module based on Dollar-Cost Averaging strategy.",
       "technologies": "FuelPHP / MySQL / Binance APIs / bitFlyer APIs",
       "thumbnail": "cbot.png",
       "color": "#F65500",

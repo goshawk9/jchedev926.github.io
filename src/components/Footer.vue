@@ -27,7 +27,6 @@ export default {
   },
   created() {
     this.year = new Date().getFullYear()
-    this.company = json.name
     this.email = json.email
     this.github = json.github
     this.linkedin = json.linkedin
@@ -58,6 +57,7 @@ footer {
       margin-top: 0;
       margin-bottom: 0;
       text-align: center;
+      font-size: 0.9em;
     }
 
     .socials {

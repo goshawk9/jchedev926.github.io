@@ -3,7 +3,7 @@
     <div class="container">
       <a href="#" class="logo">
         <span class="text-wrapper">
-          <span class="letters">Proactive</span>
+          <span class="letters">Be Proactive</span>
         </span>
       </a>
     </div>
