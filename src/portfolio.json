@@ -5,6 +5,16 @@
   "github": "",
   "linkedin": "https://www.linkedin.com/in/wanhao-g-97094a15a/",
   "works": [{
+      "name": "お歌でおかたづけ | SmartSpeaker Audio Player",
+      "description": "LINE Clova and Amazon Alexa Skill App for children.<br>This app was selected as the best skill for children and won LINE Clova Skill Awards 2019.",
+      "role": "<i>July 2019 - July 2019</i> &nbsp;&nbsp;|&nbsp;&nbsp; Full-Stack Developer &nbsp;&nbsp;|&nbsp;&nbsp; Individual Client <br><br> I implemented skill`s scenario provided from client on Amazon Alex and Line Clova console, and built back-end on Amazon Lambda.",
+      "technologies": "LINE Clova SDK /  Amazon Alexa SDK / Amazon Lambda / NodeJS",
+      "thumbnail": "okatazuke.png",
+      "color": "#D16CA1",
+      "url": "https://engineering.linecorp.com/ja/blog/line-clova-skill-awards-result/",
+      "public": true
+    },
+    {
       "name": "PDF Portal",
       "description": "PDF Portal is a website that provides features like full-text search from PDF file, PDF view and creating.",
       "role": "<i>May 2019 - July 2019</i> &nbsp;&nbsp;|&nbsp;&nbsp; Full-Stack Developer &nbsp;&nbsp;|&nbsp;&nbsp; Internnect LLC <br><br> I worked on both front-end and back-end so built UI pages with VueJS and a module to view and create new pdf file from images and texts.",
