@@ -4,7 +4,7 @@
       <span>Featured works</span>
     </h2>
     <project
-      v-for="(item, index) in myWorks"
+      v-for="(item, index) in activeProjects"
       :key="index"
       v-bind:index="parseInt(index)"
       :data="item"
@@ -25,6 +25,13 @@ export default {
     return {
       myWorks: json.works,
     }
+  },
+  computed: {
+    activeProjects() {
+      return this.myWorks.filter(function(project) {
+        return project.public
+      })
+    },
   },
 }
 </script>

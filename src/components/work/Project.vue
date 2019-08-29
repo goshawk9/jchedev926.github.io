@@ -2,6 +2,7 @@
   <article
     role="article"
     class="project"
+    v-if="data.public === true"
     v-observe-visibility="{
       callback: visibilityChanged,
       once: true,
@@ -32,10 +33,10 @@
                 <p class="tech-content">{{ data.technologies }}</p>
                 <h4 class="role-title">My role</h4>
                 <p class="role-content" v-html="data.role"></p>
-                <div class="view-more">
-                  <div class="btn" v-bind:style="{'background-color': data.color}">
-                    <a v-bind:href="data.url" target="_blank">view website</a>
-                  </div>
+                <div class="view-more" v-if="data.url.length > 0">
+                  <a v-bind:href="data.url" target="_blank">
+                    <div class="btn" v-bind:style="{'background-color': data.color}">view website</div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -177,6 +178,9 @@ $thumbnail-height: 9vw;
     border-color: $primary-color;
     background: $primary-color;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &.animate {
       transform: translateX(0);
@@ -267,11 +271,11 @@ $thumbnail-height: 9vw;
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
+  }
 
-    a {
-      color: $primary-color;
-      text-decoration: none;
-    }
+  a {
+    color: $second-color;
+    text-decoration: none;
   }
 }
 </style>
